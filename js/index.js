@@ -50,25 +50,25 @@ let circleRadius = 5
 let pi = Math.PI
 
 // circumference = C(pi)(radius)
-let circleCircumference = pi * circleRadius
+let circleCircumference = (pi * circleRadius).toFixed(2)
 console.log(`The circumference is ${circleCircumference}cm.`)
 
 //area A = (pi)(radius)sq
-let circleArea = pi * (circleRadius * circleRadius)
+let circleArea = (pi * (circleRadius * circleRadius)).toFixed(2)
 console.log(`The area is ${circleArea}cm.`)
 
 //EXERCISE 5: The Temperature Converter
 //It's hot out! Let's make a converter based on the steps here. Store a celsius temperature into a variable. Convert it to fahrenheit and output "NN°C is NN°F".  Now store a fahrenheit temperature into a variable. Convert it to celsius and output "NN°F is NN°C."
 let celsiusTemp = 20
 
-let celToFah = ((celsiusTemp / 5) * 9) + 32
+let celToFah = (((celsiusTemp / 5) * 9) + 32).toFixed(2)
 
 console.log(`${celsiusTemp}°C is ${celToFah}°F`)
 
 
 let fahrenheitTemp = 65
 
-let fahToCel = ((fahrenheitTemp - 32) * 5) / 9
+let fahToCel = (((fahrenheitTemp - 32) * 5) / 9).toFixed(2)
 
 console.log(`${fahrenheitTemp}°F is ${fahToCel}°C`)
 
@@ -117,7 +117,7 @@ function percentOf(numOne, numTwo) {
     return (numTwo / numOne) * 100 
 }
 
-let valueOne = 157.91
+let valueOne = 2
 let valueTwo = 4
 
 
@@ -166,4 +166,36 @@ calculateAll(4)
 
 
 // document object model
-let eleFortune = document.querySelector('.ex1')
+let exFortune = document.querySelector('.ex1')
+exFortune.textContent = `You will be a(n) ${jobTitle} in ${geoLocation}, making $${annualSalary} for ${companyName}.`
+
+let exAge = document.querySelector('.ex2')
+exAge.textContent = `They are ${ageCalculated} years old.`
+
+let exLifeSupply = document.querySelector('.ex3')
+exLifeSupply.textContent = `You will need ${lifetimeSnack} gummy peach rings to last you until the ripe old age of ${maxAge}.`
+
+let exGeo = document.querySelector('.ex4')
+exGeo.textContent = `The circumference is ${circleCircumference}cm. The area is ${circleArea}cm.`
+
+let exTemp = document.querySelector('.ex5')
+exTemp.textContent = `${celsiusTemp}°C is ${celToFah}°F. ${fahrenheitTemp}°F is ${fahToCel}°C.`
+
+let exSqNum = document.querySelector('.ex6')
+exSqNum.textContent = `The result of squaring the number ${numToSq} is: ${squareNumber(numToSq)}.`
+
+let exHalfNum = document.querySelector('.ex7')
+exHalfNum.textContent =`Half of ${halfOfNum} is ${halfNumber(halfOfNum)}.`
+
+let exPercent = document.querySelector('.ex8')
+exPercent.textContent = `${valueOne} is ${percentOf(valueTwo, valueOne)}% of ${valueTwo}`
+
+let exCircleArea = document.querySelector('.ex9')
+exCircleArea.textContent = `The area for a circle with radius ${radiusOfCircle} cm is ${areaOfCircle(radiusOfCircle)}cm.`
+
+
+let exCalculator = document.querySelector('.ex10')
+exCalculator.textContent = `Half of ${numOne} is ${halfNumber(numOne)}.`
+                           `The result of ${halfedNum} squared is ${squareNumber(halfedNum)}.`
+                           `The area of a circle with a radius of ${squaredNum} cm has an area of ${areaOfCircle(squaredNum)}cm.`
+                           `${circleArea} is ${percentOf(squaredNum, circleArea)}% of ${squaredNum}.`
