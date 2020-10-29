@@ -114,21 +114,21 @@ console.log(`Half of ${halfOfNum} is ${halfNumber(halfOfNum)}.`)
 // EXERCISE 3
 // Write a function named percentOf that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
 function percentOf(numOne, numTwo) {
-    return (numOne / numTwo) * 100 
+    return (numTwo / numOne) * 100 
 }
 
-let valueOne = 2
+let valueOne = 157.91
 let valueTwo = 4
 
 
-console.log(`${valueOne} is ${percentOf(valueOne, valueTwo)}% of ${valueTwo}.`)
+console.log(`${valueOne} is ${percentOf(valueTwo, valueOne)}% of ${valueTwo}.`)
 
 
 // EXERCISE 4
 // Write a function named areaOfCircle that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
 //      Bonus: Round the result so there are only two digits after the decimal.
 function areaOfCircle(radius) {
-    return (((Math.PI * radius) ** radius)).toFixed(2) // answer rounded to 2 decimal places
+    return (((Math.PI * radius) ** 2)).toFixed(2) // answer rounded to 2 decimal places
 }
 
 let radiusOfCircle = 2
@@ -153,11 +153,17 @@ function calculateAll(numOne) {
     let squaredNum = squareNumber(halfedNum) // sq result of halfedNum and store it
     console.log(`The result of ${halfedNum} squared is ${squareNumber(halfedNum)}.`)
 
-    let circleArea = areaOfCircle(Math.PI * squaredNum) ** 2 // sub squaredNum into circle area formula as radius
-    console.log(`The area of a circle with a radius of ${squaredNum} is ${areaOfCircle(squaredNum)}.`)
+    let circleArea = areaOfCircle(squaredNum) // sub squared num as radius value
+    console.log(`The area of a circle with a radius of ${squaredNum} cm has an area of ${areaOfCircle(squaredNum)}cm.`)
 
-    let percentageNum = percentOf(circleArea, squaredNum) // percentage that circle area is of squaredNum
-    console.log(`${circleArea} is ${percentOf(circleArea, squaredNum)} of ${squaredNum}.`)
+    let percentageNum = percentOf(squaredNum, circleArea) // percentage that circle area is of squaredNum
+    console.log(`${circleArea} is ${percentOf(squaredNum, circleArea)}% of ${squaredNum}.`)
 }
 
-console.log(calculateAll(10))
+calculateAll(4)
+
+
+
+
+// document object model
+let eleFortune = document.querySelector('.ex1')
