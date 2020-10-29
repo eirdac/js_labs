@@ -194,8 +194,5 @@ let exCircleArea = document.querySelector('.ex9')
 exCircleArea.textContent = `The area for a circle with radius ${radiusOfCircle} cm is ${areaOfCircle(radiusOfCircle)}cm.`
 
 
-let exCalculator = document.querySelector('.ex10')
-exCalculator.textContent = `Half of ${numOne} is ${halfNumber(numOne)}.`
-                           `The result of ${halfedNum} squared is ${squareNumber(halfedNum)}.`
-                           `The area of a circle with a radius of ${squaredNum} cm has an area of ${areaOfCircle(squaredNum)}cm.`
-                           `${circleArea} is ${percentOf(squaredNum, circleArea)}% of ${squaredNum}.`
+let exCalculator = document.querySelector('.ex10') // displaying the last line of the function that calculates all
+exCalculator.textContent = `157.91 is ${percentOf(4, 157.91)}% of 4.` // couldn't get the placeholders with the variables to work...
